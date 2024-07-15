@@ -1,0 +1,31 @@
+version: '3'
+
+volumes:
+  data:
+
+services:
+  mongodb:
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    volumes:
+      - data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+
+  neo4j:
+    image: neo4j:enterprise
+    restart: unless-stopped
+    ports:
+      - 7474:7474
+      - 7687:7687
+    environment:
+      - NEO4J_AUTH=${NEO4J_AUTH}
+      - NEO4J_ACCEPT_LICENSE_AGREEMENT="yes"
+    volumes:
+      - ../Dati/dati_1000.csv:/var/lib/neo4j/import/dati_1000.csv
+      - ../Dati/dati_10000.csv:/var/lib/neo4j/import/dati_10000.csv
+      - ../Dati/dati_100000.csv:/var/lib/neo4j/import/dati_100000.csv
+      - ../Dati/dati_1000000.csv:/var/lib/neo4j/import/dati_1000000.csv

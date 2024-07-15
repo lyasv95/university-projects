@@ -1,0 +1,6 @@
+<config>
+    <client>
+        <serverName>localhost</serverName>
+        <serverPort>6789</serverPort>
+    </client>
+</config>

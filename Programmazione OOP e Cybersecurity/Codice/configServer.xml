@@ -1,0 +1,13 @@
+<config>
+    <server>
+        <port>6789</port>
+        <influxDB_URL>http://localhost:8086</influxDB_URL>
+        <influxDB_Token>NWgACZFcMKW6SVCtx-7H6RE75QezQREqRYsmyTBvTRPZshZucxZqLm-48Zux68vc0jlxvH6J-GNMrPkp0_lYuA==</influxDB_Token>
+        <organization>programmazione2</organization>
+        <bucket>BPMMonitor</bucket>
+        <twoFactorAuthenticationToken>ZAYHLVOQGT4B7TOHXK4NCTN4TCXSQIML</twoFactorAuthenticationToken>
+        <logFileName>logger.txt</logFileName>
+        <credentialsFile>credentials.txt</credentialsFile>
+    </server>
+</config>
+
