@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vitaliy Lyaskovskiy">
+    <meta name="keywords" content="mining rig, mining farm, crypto">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <a href="decentralization.html">Decentralizzazione</a>
+        <a href="eco-sustainability.html">Ecosostenibilità</a>
+        <a href="about-us.html">Chi Siamo</a>
+        <button type="button" id="logoutButton" onclick="logout()">Logout</button>
+        <button type="button" id="dashButton" onclick="areaRiservata()">Dashboard</button>
+        <button type="button" id="loginButton" onclick="login()">Login</button>
+
+    </div>
+
+    <img src="../css/logo.png" class="logo" alt="logo">
+
+    <div id="slogan">
+        <h1>Benvenuti nella Rivoluzione del Mining</h1>
+        <h3>Leader nel settore del mining di criptovalute</h3>
+        <h4>Scoprite la potenza e l'efficienza della nostra mining farm.</h4>
+    </div>
+
+    <div id="modalLogin">
+        <div class="modalContent animation">
+            <span class="modalClose" title="Chiudi" onclick="chiudiModale()">&times;</span>
+            <div class="modalTopContainer">
+                <i class="fa fa-bitcoin" style="font-size:45px"></i>
+            </div>
+            <form id="modalForm" onsubmit="loginUser(event);">
+                <label for="username"><b>Username</b></label>
+                <input type="text" id="username" placeholder="Inserisci il tuo Username" name="username" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Inserisci la tua Password" name="password" required>
+                <button type="submit" class="modalButton">Login</button>
+                <div id="responseMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../javascript/site.js"></script>
+</body>
+
+</html>

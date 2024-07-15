@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vitaliy Lyaskovskiy">
+    <meta name="keywords" content="mining rig, mining farm, crypto">
+    <title>Eco-sustainability</title>
+    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="decentralization.html">Decentralizzazione</a>
+        <a class="active" href="eco-sustainability.html">Ecosostenibilità</a>
+        <a href="about-us.html">Chi Siamo</a>
+        <button type="button" id="logoutButton" onclick="logout()">Logout</button>
+        <button type="button" id="dashButton" onclick="areaRiservata()">Dashboard</button>
+        <button type="button" id="loginButton" onclick="login()">Login</button>
+    </div>
+
+    <img src="../css/pannelli.jpeg" class="topImage" alt="pannelli solari">
+
+    <article class="gridContainer">
+        <div class="gridText">
+            <h1>Ecosostenibilità nelle Mining Farm</h1>
+            <p>Nell'era digitale le mining farm sono diventate un pilastro fondamentale per la creazione e la
+                gestione di criptovalute, tuttavia l'attività di mining è spesso
+                associata a un elevato consumo energetico e a un impatto ambientale significativo. In questo
+                contesto l'ecosostenibilità emerge come un aspetto cruciale per garantire che le mining farm
+                possano operare in armonia e a tutela dell'ambiente, per tale motivo la nostra Mining Farm
+                utilizza energia elettrica derivata da fonti 100% rinnovabili. </p>
+        </div>
+
+        <img src="../css/ecos1.jpg" class="gridImg" alt="ecosostenibilità">
+
+        <img src="../css/efficienza3.png" class="gridImg" alt="efficienza energetica">
+
+        <div class="gridText">
+            <h1>Efficienza Energetica</h1>
+            <p>La nostra mining farm ecosostenibile adotta tecnologie che migliorano l'efficienza
+                energetica. Viene utilizzato hardware avanzato e sempre aggiornato che richiede meno
+                energia per lo stesso lavoro di convalida dei blocchi. L'impiego di fonti di energia
+                rinnovabile, come il solare e l'eolico, riduce l'uso di combustibili fossili.</p>
+        </div>
+
+        <div class="gridText">
+            <h1>Riciclo e Riutilizzo</h1>
+            <p>La sostenibilità passa anche attraverso il ciclo di vita dell'hardware per l'attività di
+                mining. Quando i dispositivi diventano obsoleti, vengano riciclati o riutilizzati in modo
+                responsabile, questo non solo riduce i rifiuti elettronici ma promuove anche un'economia
+                circolare dove ogni componente può avere una seconda vita.</p>
+        </div>
+
+        <img src="../css/riciclo2.png" class="gridImg" alt="riciclo">
+
+        <img src="../css/impegno.jpg" class="gridImg" alt="collaborazione">
+
+        <div class="gridText">
+            <h1>Impegno Collettivo</h1>
+            <p>L'ecosostenibilità nella nostra mining farm richiede un impegno collettivo. Gli utenti e gli
+                investitori possono favorire il cambiamento scegliendo criptovalute che promuovono pratiche di
+                mining sostenibili e supportando le aziende che si impegnano in questa direzione. Le aziende che
+                adottano pratiche sostenibili oggi saranno quelle che guideranno il mercato di domani.</p>
+        </div>
+    </article>
+
+    <div id="modalLogin">
+        <div class="modalContent animation">
+            <span class="modalClose" title="Chiudi" onclick="chiudiModale()">&times;</span>
+            <div class="modalTopContainer">
+                <i class="fa fa-bitcoin" style="font-size:45px"></i>
+            </div>
+            <form id="modalForm" onsubmit="loginUser(event);">
+                <label for="username"><b>Username</b></label>
+                <input type="text" id="username" placeholder="Inserisci il tuo Username" name="username" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Inserisci la tua Password" name="password" required>
+                <button type="submit" class="modalButton">Login</button>
+                <div id="responseMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../javascript/site.js"></script>
+</body>
+</html>

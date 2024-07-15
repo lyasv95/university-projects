@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vitaliy Lyaskovskiy">
+    <meta name="keywords" content="mining rig, mining farm, crypto">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="decentralization.html">Decentralizzazione</a>
+        <a href="eco-sustainability.html">Ecosostenibilità</a>
+        <a href="about-us.html">Chi Siamo</a>
+        <button type="button" id="logoutButton" onclick="logout()">Logout</button>
+        <button type="button" id="dashButton" onclick="areaRiservata()">Dashboard</button>
+        <button type="button" id="loginButton" onclick="login()">Login</button>
+    </div>
+
+    <div class="dashContainer">
+        <section class="dashItem">
+            <h2>Clienti</h2>
+            <div class="itemActions">
+                <button onclick="formInserisciCliente()"><i class="fa fa-plus"></i> Inserisci</button>
+                <button onclick="formModificaCliente()"><i class="fa fa-edit"></i> Modifica</button>
+                <button onclick="formEliminaCliente()"><i class="fa fa-trash"></i> Cancella</button>
+                <button onclick="formRicercaCliente()"><i class="fa fa-search"></i> Ricerca</button>
+                <button onclick="visualizzaClienti()"><i class="fa fa-list"></i> Visualizza Tutto</button>
+            </div>
+        </section>
+
+        <section class="dashItem">
+            <h2>Noleggi</h2>
+            <div class="itemActions">
+                <button onclick="formInserisciNoleggio()"><i class="fa fa-plus"></i> Inserisci</button>
+                <button onclick="formModificaNoleggio()"><i class="fa fa-edit"></i> Modifica</button>
+                <button onclick="formEliminaNoleggio()"><i class="fa fa-trash"></i> Cancella</button>
+                <button onclick="visualizzaNoleggiAttivi()"><i class="fa fa-check-circle"></i> Noleggi Attivi</button>
+                <button onclick="formRicercaNoleggio()"><i class="fa fa-search"></i> Ricerca</button>
+                <button onclick="visualizzaNoleggi()"><i class="fa fa-list"></i> Visualizza Tutto</button>
+            </div>
+        </section>
+
+        <section class="dashItem">
+            <h2>Mining Rig</h2>
+            <div class="itemActions">
+                <button onclick="formInserisciMiningRig()"><i class="fa fa-plus"></i> Inserisci</button>
+                <button onclick="formModificaMiningRig()"><i class="fa fa-edit"></i> Modifica</button>
+                <button onclick="formEliminaMiningRig()"><i class="fa fa-trash"></i> Cancella</button>
+                <button onclick="formRicercaMiningRig()"><i class="fa fa-search"></i> Ricerca</button>
+                <button onclick="visualizzaMiningRigs()"><i class="fa fa-list"></i> Visualizza Tutto</button>
+            </div>
+        </section>
+
+        <section class="dashItem">
+            <h2>Mining Farm</h2>
+            <div class="itemActions">
+                <button onclick="formInserisciMiningFarm()"><i class="fa fa-plus"></i> Inserisci</button>
+                <button onclick="formModificaMiningFarm()"><i class="fa fa-edit"></i> Modifica</button>
+                <button onclick="formEliminaMiningFarm()"><i class="fa fa-trash"></i> Cancella</button>
+                <button onclick="formRicercaMiningFarm()"><i class="fa fa-search"></i> Ricerca</button>
+                <button onclick="visualizzaMiningFarms()"><i class="fa fa-list"></i> Visualizza Tutto</button>
+            </div>
+        </section>
+    </div>
+
+    <div id="modaleDashboard">
+    </div>
+
+    <div id="modalLogin">
+        <div class="modalContent animation">
+            <span class="modalClose" title="Chiudi" onclick="chiudiModale()">&times;</span>
+            <div class="modalTopContainer">
+                <i class="fa fa-bitcoin" style="font-size:45px"></i>
+            </div>
+            <form id="modalForm" onsubmit="loginUser(event);">
+                <label for="username"><b>Username</b></label>
+                <input type="text" id="username" placeholder="Inserisci il tuo Username" name="username" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Inserisci la tua Password" name="password" required>
+                <button type="submit" class="modalButton">Login</button>
+                <div id="responseMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../javascript/site.js"></script>
+
+    <script src="../javascript/clients.js"></script>
+
+    <script src="../javascript/miningFarms.js"></script>
+
+    <script src="../javascript/rentals.js"></script>
+
+    <script src="../javascript/miningRigs.js"></script>
+</body>
+</html>

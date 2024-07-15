@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vitaliy Lyaskovskiy">
+    <meta name="keywords" content="mining rig, mining farm, crypto">
+    <title>Decentralization</title>
+    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a class="active" href="decentralization.html">Decentralizzazione</a>
+        <a href="eco-sustainability.html">Ecosostenibilità</a>
+        <a href="about-us.html">Chi Siamo</a>
+        <button type="button" id="logoutButton" onclick="logout()">Logout</button>
+        <button type="button" id="dashButton" onclick="areaRiservata()">Dashboard</button>
+        <button type="button" id="loginButton" onclick="login()">Login</button>
+    </div>
+
+    <img src="../css/dec.jpg" class="topImage" alt="decentralization">
+
+    <article id="decentralization">
+        <h1>Il ruolo della Decentralizzazione</h1>
+        <p>La decentralizzazione è un concetto che sta guadagnando sempre più terreno nel mondo della tecnologia e del
+            web. Si tratta di una struttura in cui il potere, l'informazione o l'autorità sono distribuiti tra più
+            attori piuttosto che concentrati in un unico punto. Questo approccio offre numerosi vantaggi, tra cui
+            maggiore sicurezza, resistenza alla censura e promozione dell'innovazione.</p>
+        <p>Uno degli esempi più noti di decentralizzazione nel campo tecnologico è la blockchain ovvero la tecnologia alla
+            base delle criptovalute come Bitcoin. La blockchain è un registro distribuito che consente di registrare
+            transazioni in modo sicuro e trasparente senza la necessità di un'autorità centrale.</p>
+        <p>La decentralizzazione non si limita però solo alla finanza, trova applicazione in molti altri settori
+            come i social media dove piattaforme permettono agli utenti di comunicare senza dipendere da
+            un'unica azienda che controlla i dati. Anche nel campo dell'energia la decentralizzazione permette di
+            creare reti energetiche più resilienti e sostenibili.</p>
+    </article>
+
+    <div id="modalLogin">
+        <div class="modalContent animation">
+            <span class="modalClose" title="Chiudi" onclick="chiudiModale()">&times;</span>
+            <div class="modalTopContainer">
+                <i class="fa fa-bitcoin" style="font-size:45px"></i>
+            </div>
+            <form id="modalForm" onsubmit="loginUser(event);">
+                <label for="username"><b>Username</b></label>
+                <input type="text" id="username" placeholder="Inserisci il tuo Username" name="username" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Inserisci la tua Password" name="password" required>
+                <button type="submit" class="modalButton">Login</button>
+                <div id="responseMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../javascript/site.js"></script>
+</body>
+
+</html>
+

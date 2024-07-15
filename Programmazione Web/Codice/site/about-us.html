@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vitaliy Lyaskovskiy">
+    <meta name="keywords" content="mining rig, mining farm, crypto">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="decentralization.html">Decentralizzazione</a>
+        <a href="eco-sustainability.html">Ecosostenibilità</a>
+        <a class="active" href="about-us.html">Chi Siamo</a>
+        <button type="button" id="logoutButton" onclick="logout()">Logout</button>
+        <button type="button" id="dashButton" onclick="areaRiservata()">Dashboard</button>
+        <button type="button" id="loginButton" onclick="login()">Login</button>
+    </div>
+
+    <div id="aboutUs">
+        <img src="../css/rig.jpeg" alt="personal rig">
+        <div class="flexText">
+            <h2>Mining Farm</h2>
+            <p> Benvenuti in <i>Mining Farm</i>, fondata nel 2024, la nostra missione è rendere il mining di criptovalute
+                accessibile a tutti indipendentemente dalla propria esperienza oppure conoscenza tecnica maturata in questo settore.
+                La nostra azienda è guidata da un team di esperti nel campo delle criptovalute e dell'informatica che
+                lavorano con passione ed impegno per garantire risultati costanti e sopprattutto al massimo dell'efficienza.
+                Utilizziamo l'hardware più avanzato e le tecnologie di raffreddamento all'avanguardia per garantire un
+                funzionamento ottimale e sicuro dei nostri mining rig anche durante i periodi più caldi come quelli estivi.
+                In <i>Mining Farm</i> crediamo nel potere della blockchain e pensiamo che si in grado 
+                di rivoluzionare il mondo finanziario grazie alle sue potenzialità, a tal proposito siamo orgogliosi di contribuire a questa rivoluzione fornendo ai nostri 
+                clienti un servizio di mining attualmente migliore sul mercato. Siamo entusiasti di far parte del vostro viaggio nel mondo delle
+                criptovalute.
+            </p>
+        </div>
+    </div>
+
+    <div id="modalLogin">
+        <div class="modalContent animation">
+            <span class="modalClose" title="Chiudi" onclick="chiudiModale()">&times;</span>
+            <div class="modalTopContainer">
+                <i class="fa fa-bitcoin" style="font-size:45px"></i>
+            </div>
+            <form id="modalForm" onsubmit="loginUser(event);">
+                <label for="username"><b>Username</b></label>
+                <input type="text" id="username" placeholder="Inserisci il tuo Username" name="username" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Inserisci la tua Password" name="password" required>
+                <button type="submit" class="modalButton">Login</button>
+                <div id="responseMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../javascript/site.js"></script>
+</body>
+
+</html>
